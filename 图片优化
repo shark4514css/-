@@ -1,0 +1,29 @@
+1. 用工具进行图片压缩：
+   （1）压缩png
+       node-pngquant-native
+       跨平台，压缩比高，压缩png24非常好
+   （2）压缩jpg
+       jpetran
+       跨平台，有linux、Mac、Windows解决方案
+   （3）压缩gif
+       gifsicle
+       通过改变每帧比例，减少gif文件大小，同时可以使用透明来达到更小的文件大小，目前公认的解决方案
+2. 图片尺寸随网络环境变化
+   不同网络环境下，加载不同尺寸和像素的图片，通过在图片URL后缀加不同参数改变
+3. 响应式图片
+   （1）javascript绑定事件检测窗口大虾
+   （2） css媒体查询
+        @media screen and （max-width: 640px） {
+            my_image{width: 640px;}
+        }
+    (3) img标签属性
+        <img srcset='img-320w.jpg, img-640w.jpg 2x, img-960w.jpg 3x' src='img-960w.jpg' alt='img'>
+        x描述符： 表示图像的设备像素比
+4. 逐步加载图像
+   使用统一占位符
+   使用低质量图像占位符
+   基于svg的图像占位符
+5. 其他方式
+   web font 代替图片
+   data URI代替图片： base64
+   雪碧图
